@@ -17,6 +17,9 @@
 
     <!-- Custom styles for this template -->
     <link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
     <?php wp_head(); ?>
   </head>
 
@@ -39,49 +42,38 @@
         </nav>
       </div>
     </div>
-  <section class="showcase">
-    <div class="container">
-      <h1>Custom Bootstrap WordPress Theme</h1>
-        <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-        <a class="btn btn-primary btn-lg">Read More</a>
-     </div>
-  </section>
 
-  <section class="boxes">
-    <div class="containter">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="box">
-            <i class="fas fa-users" aria-hidden="true"></i>
-            <h3> Dummy Text 4 you to See!</h3>
-            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+    <section class="showcase">
+      <div class="container">
+        <h1>Custom Bootstrap Wordpress Theme</h1>
+        <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eu leo quam</p>
+        <a class="btn btn-primary btn-lg">Read More</a>
+      </div>
+    </section>
+
+    <section class="boxes">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+              <?php if(is_active_sidebar('box1')) : ?>
+                <?php dynamic_sidebar('box1'); ?>
+              <?php endif; ?>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="box">
-              <i class="fas fa-anchor"></i>
-            <h3> Dummy Text 4 you to See!</h3>
-            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+
+          <div class="col-md-4">
+              <?php if(is_active_sidebar('box2')) : ?>
+                <?php dynamic_sidebar('box2'); ?>
+              <?php endif; ?>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="box">
-            <i class="fas fa-bomb"></i>
-            <h3> Dummy Text 4 you to See!</h3>
-            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="box">
-            <i class="fas fa-fighter-jet"></i>
-            <h3> Dummy Text 4 you to See!</h3>
-            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+
+          <div class="col-md-4">
+              <?php if(is_active_sidebar('box3')) : ?>
+                <?php dynamic_sidebar('box3'); ?>
+              <?php endif; ?>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
+</section>
   <footer class="blog-footer">
     <p>&copy <?php echo Date('Y'); ?> - <?php bloginfo('name'); ?></p>
     <p>
